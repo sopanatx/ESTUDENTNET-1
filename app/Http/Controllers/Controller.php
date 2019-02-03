@@ -18,20 +18,20 @@ class Controller extends BaseController
     {
         $current = Carbon::now();
         $checkstd = checkstd::all();
-foreach ($checkstd as $chkshow)
+        foreach ($checkstd as $chkshow)
 {
      $chkshow->std_name;
 }
-return view('homecheck',compact('chkshow','chklogshow'));
+return view('homecheck',compact('std_id'));
         
     }
 
     public function resultData($std_id)
     {
-      //  $checkhistory = checkhistory::all();
-       // $chklogshow = Checkhistory::find($std_id);
+    //    $chkshow = checkhistory::all();
+      //  $chklogshow = Checkhistory::find($std_id);
        $chklogshow = Checkhistory::where('std_id',$std_id)->get();
-        $chkshow = checkstd::findOrFail($std_id);
+       $chkshow = checkstd::findOrFail($std_id);
         return view('/result',compact('chkshow'))->with(array('chklogshow'=>$chklogshow));
         
     }
@@ -42,4 +42,3 @@ return view('homecheck',compact('chkshow','chklogshow'));
       
     }
 }
- 

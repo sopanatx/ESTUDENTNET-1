@@ -220,10 +220,6 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 
 <div class="checktext">
 <h3 class="checktext"style="color:#ffc300" >ประกาศจากทางโรงเรียน<h3>
-<h5 class="checktext" style="color:#4C4C4C" >ระบบตรวจสอบคะแนนพฤติกรรมนักเรียน Version : 2019-Beta-2.0 นี้<h5>
-<h5 class="checktext" style="color:#4C4C4C" >ถูกออกแบบมาใหม่เนื่องจาก Version : 2016-Release-1.0 นั้นมีช่องโหว่อันตรายอย่างมาก<h5>
-<h5 class="checktext" style="color:#4C4C4C" >ทั้งนี้ใน Version : 2019-Beta-2.0 จะแก้ไขปัญหาต่างๆ พร้อมทั้งเสริมฟีเจอร์การใช้งานใหม่ๆไปอีกด้วยย<h5>
-
 
 </div>
 <section class="container container-fixed-lg p-t-50 p-b-100 sm-p-b-30 sm-m-b-30">

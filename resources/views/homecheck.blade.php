@@ -131,7 +131,7 @@ html,body,a,h1,h2,h3,h4,h5,h6,div,span,li
 <div class="font-arial m-l-35 m-r-35 m-b-20  m-t-20  visible-sm visible-xs">
 <p class="fs-11 no-margin small-text p-b-20">Exclusive only at ,Themeforest. See Standard licenses & Extended licenses
 </p>
-<p class="fs-11 small-text muted">Copyright &copy; 2014 REVOX</p>
+<p class="fs-11 small-text muted">>สงวนสิขสิทธิ์  &copy; 2019  NEXT!TECH TEAM</p>
 </div>
 
 </div>
@@ -220,9 +220,6 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 
 <div class="checktext">
 <h3 class="checktext"style="color:#ffc300" >ประกาศจากทางโรงเรียน<h3>
-<h5 class="checktext" style="color:#4C4C4C" >ระบบตรวจสอบคะแนนพฤติกรรมนักเรียน Version : 2019-Beta-2.0 นี้<h5>
-<h5 class="checktext" style="color:#4C4C4C" >ถูกออกแบบมาใหม่เนื่องจาก Version : 2016-Release-1.0 นั้นมีช่องโหว่อันตรายอย่างมาก<h5>
-<h5 class="checktext" style="color:#4C4C4C" >ทั้งนี้ใน Version : 2019-Beta-2.0 จะแก้ไขปัญหาต่างๆ พร้อมทั้งเสริมฟีเจอร์การใช้งานใหม่ๆไปอีกด้วยย<h5>
 
 
 </div>
@@ -238,11 +235,12 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 </p>
 <br>
 <br>
-<form class="m-t-15" action="/result/{std_id}" method="POST" >
+
+<form class="m-t-15" action="{{ route('result') }}" method="post" >
 {{ csrf_field() }}
 <div class="form-group form-group-default">
 <label>เลขประจำตัวนักเรียน</label>
-<input id="std_id" class="form-control" type="number">
+<input  name="std_id" id="std_id" class="form-control" type="number">
 </div>
 <div class="sm-p-t-10 clearfix">
 <p class="pull-left small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d"> 
@@ -253,6 +251,7 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 
 <div class="clearfix"></div>
 </form>
+
 </div>
 </div>
 <div class="col-md-6">
@@ -324,7 +323,8 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 <div class="col-sm-6 text-right font-arial sm-text-left">
 <p class="fs-11 small-text no-margin text-white"><span class="hint-text">พัฒนาโดย </span>บริษัท NEXT!TECH TEAM  <span class="hint-text"></span>
 </p>
-<p class="fs-11 muted text-white m-t-5">สงวนสิขสิทธิ์  &copy; 2019  NEXT!TECH TEAM</p>
+<p class="fs-11 muted text-white m-t-5">สงวนสิขสิทธิ์  &copy; 2016 - 2019  NEXT!TECH TEAM</p>
+    <p class="fs-11 muted text-white m-t-5">กรณีพบปัญหาในการใช้งาน กรุณาติดต่อ pleum@nextitech.me</p>
 </div>
 </div>
 </div>

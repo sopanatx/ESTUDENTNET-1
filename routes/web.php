@@ -34,14 +34,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::get('result/{std_id}', function ($std_id) {
-// $chkshow = checkstd::find($std_id);
-// return view('result',compact('chkshow','current','date','yearth'));
+ //Route::get('result/{std_id}', function ($std_id) {
+ //$chkshow = checkstd::find($std_id);
+ //return view('result',compact('chkshow','current','date','yearth'));
 // });
-Route::get('result/','Controller@resultData')->name('result');
+Route::get('result/','HomeController@search')->name('result1');
+Route::post('search/','HomeController@search')->name('result');
+//Route:any('result/{std_id}',function (){
+  // $std_id = Input::get('std_id');
+//    return view ('result/{std_id}','Controller@resultData')->name('result');
+//});
 Route::get('admin/form', function () {
     return view('admin/form');
 });
+
+Route::any('search' , 'HomeController@search');
 
 Route::get('/ac', function () {
     // echo Checkhistory::find(2);
