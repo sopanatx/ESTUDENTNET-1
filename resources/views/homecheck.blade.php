@@ -235,9 +235,8 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 </p>
 <br>
 <br>
-
-<form class="m-t-15" action="{{ route('result') }}" method="post" >
-{{ csrf_field() }}
+   <!-- <form class="m-t-15" action="{{ route('result') }}" method="post" >
+{{csrf_field()}}
 <div class="form-group form-group-default">
 <label>เลขประจำตัวนักเรียน</label>
 <input  name="std_id" id="std_id" class="form-control" type="number">
@@ -250,8 +249,9 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 </div>
 
 <div class="clearfix"></div>
-</form>
+</form> -->
 
+</div>
 </div>
 </div>
 <div class="col-md-6">

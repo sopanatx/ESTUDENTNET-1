@@ -163,6 +163,7 @@ return [
         Eyewitness\Eye\EyeServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         MasterRO\LaravelXSSFilter\XSSFilterServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -231,10 +232,14 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Date' => Jenssegers\Date\Date::class,
         'Input' => Illuminate\Support\Facades\Input::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'XSSCleaner' => MasterRO\LaravelXSSFilter\XSSCleanerFacade::class,
         'Date' => Jenssegers\Date\Date::class,
         'Thaidate' => Rundiz\Thaidate\Thaidate::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
