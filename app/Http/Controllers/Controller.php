@@ -11,6 +11,7 @@ use App\checkhistory;
 use App\Http\Controllers\Encoding;
 use Carbon\Carbon;
 use Rundiz\Thaidate\Thaidate;
+use Illuminate\Http\Request;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -34,6 +35,12 @@ return view('homecheck',compact('std_id'));
        $chkshow = checkstd::findOrFail($std_id);
         return view('/result',compact('chkshow'))->with(array('chklogshow'=>$chklogshow));
         
+    }
+    public function resultNewData(Request $request){
+        $std_search = $request->input('std_id');
+        $chklogshow = Checkhistory::where('std_id',$std_search)->get();
+        $chkshow = checkstd::findOrFail($std_search);
+        return view('result',compact('chkshow'))->with(array('chklogshow'=>$chklogshow));
     }
     public function student_history()
     {

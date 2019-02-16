@@ -18,7 +18,7 @@
     <link href="{{ asset('assets_admin/plugins/pace/pace-theme-flash.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets_admin/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets_admin/plugins/font-awesome/css/font-awesome.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets_admin/plugins/jquery-scrollbar/jquery.scrollbar.css') }}" rel="stylesheet" type="text/css" media="screen" />
+    <link href="{{ asset('assets_admin/plugins/jqueradmin/formy-scrollbar/jquery.scrollbar.css') }}" rel="stylesheet" type="text/css" media="screen" />
     <link href="{{ asset('assets_admin/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" media="screen" />
     <link href="{{ asset('assets_admin/plugins/switchery/css/switchery.min.css') }}" rel="stylesheet" type="text/css" media="screen" />
     <link href="{{ asset('assets_admin/plugins/nvd3/nv.d3.min.css') }}" rel="stylesheet" type="text/css" media="screen" />
@@ -212,7 +212,7 @@
                 <span class="icon-thumbnail">fe</span>
               </li>
               <li class="">
-                <a href="form_layouts.html">Form Layouts</a>
+                <a href="adduser.blade.php">Form Layouts</a>
                 <span class="icon-thumbnail">fl</span>
               </li>
               <li class="">
@@ -608,47 +608,7 @@
                 </div>
                 <div class="row">
                   <div class="col-lg-12 md-m-b-10 sm-m-b-10">
-                    <!-- START WIDGET widget_statTile-->
-                    <div class="widget-10 card no-border bg-white no-margin widget-loader-bar">
-                      <div class="card-header  top-left top-right ">
-                        <div class="card-title text-black hint-text">
-                          <span class="font-montserrat fs-11 all-caps">Weekly Sales <i class="fa fa-chevron-right"></i>
-                                        </span>
-                        </div>
-                        <div class="card-controls">
-                          <ul>
-                            <li><a data-toggle="refresh" class="card-refresh text-black" href="#"><i
-							class="card-icon card-icon-refresh"></i></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-block p-t-40">
-                        <div class="row">
-                          <div class="col-sm-12">
-                            <h4 class="no-margin p-b-5 text-danger semi-bold">APPL 2.032</h4>
-                            <div class="pull-left small">
-                              <span>WMHC</span>
-                              <span class=" text-success font-montserrat">
-                                                    <i class="fa fa-caret-up m-l-10"></i> 9%
-                                                </span>
-                            </div>
-                            <div class="pull-left m-l-20 small">
-                              <span>HCRS</span>
-                              <span class=" text-danger font-montserrat">
-                                                    <i class="fa fa-caret-up m-l-10"></i> 21%
-                                                </span>
-                            </div>
-                            <div class="clearfix"></div>
-                          </div>
-                        </div>
-                        <div class="p-t-10 full-width">
-                          <a href="#" class="btn-circle-arrow b-grey"><i
-						class="pg-arrow_minimize text-danger"></i></a>
-                          <span class="hint-text small">Show more</span>
-                        </div>
-                      </div>
-                    </div>
+
                     <!-- END WIDGET -->
                   </div>
                 </div>
@@ -838,143 +798,10 @@
             </div>
             <div class="row m-b-10">
               <div class="col-lg-8 sm-p-b-10 md-p-b-10">
-                <!-- START WIDGET widget_mapWidget-->
-                <div class="widget-13 card no-border  no-margin widget-loader-circle">
-                  <div class="card-header  pull-up top-right ">
-                    <div class="card-controls">
-                      <ul>
-                        <li><a href="#" class="card-refresh text-black" data-toggle="refresh"><i class="card-icon card-icon-refresh"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="container-sm-height no-overflow">
-                    <div class="row row-sm-height">
-                      <div class="col-sm-5 col-lg-4 col-xlg-3 col-sm-height col-top no-padding">
-                        <div class="card-header  ">
-                          <div class="card-title">Menu clipping
-                          </div>
-                        </div>
-                        <div class="card-block">
-                          <ul class="nav nav-pills m-t-5 m-b-15" role="tablist">
-                            <li class="active">
-                              <a href="#tab1" data-toggle="tab" role="tab" class="b-a b-grey text-master">
-                                            fb
-                                        </a>
-                            </li>
-                            <li>
-                              <a href="#tab2" data-toggle="tab" role="tab" class="b-a b-grey text-master">
-                                            js
-                                        </a>
-                            </li>
-                            <li>
-                              <a href="#tab3" data-toggle="tab" role="tab" class="b-a b-grey text-master">
-                                            sa
-                                        </a>
-                            </li>
-                          </ul>
-                          <div class="tab-content">
-                            <div class="tab-pane active" id="tab1">
-                              <h3>Facebook</h3>
-                              <p class="hint-text all-caps font-montserrat small no-margin ">Views</p>
-                              <p class="all-caps font-montserrat  no-margin text-success ">14,256</p>
-                              <br>
-                              <p class="hint-text all-caps font-montserrat small no-margin ">Today</p>
-                              <p class="all-caps font-montserrat  no-margin text-warning ">24</p>
-                              <br>
-                              <p class="hint-text all-caps font-montserrat small no-margin ">Week</p>
-                              <p class="all-caps font-montserrat  no-margin text-success ">56</p>
-                            </div>
-                            <div class="tab-pane " id="tab2">
-                              <h3>Google</h3>
-                              <p class="hint-text all-caps font-montserrat small no-margin ">Views</p>
-                              <p class="all-caps font-montserrat  no-margin text-success ">14,256</p>
-                              <br>
-                              <p class="hint-text all-caps font-montserrat small no-margin ">Today</p>
-                              <p class="all-caps font-montserrat  no-margin text-warning ">24</p>
-                              <br>
-                              <p class="hint-text all-caps font-montserrat small no-margin ">Week</p>
-                              <p class="all-caps font-montserrat  no-margin text-success ">56</p>
-                            </div>
-                            <div class="tab-pane" id="tab3">
-                              <h3>Amazon</h3>
-                              <p class="hint-text all-caps font-montserrat small no-margin ">Views</p>
-                              <p class="all-caps font-montserrat  no-margin text-success ">14,256</p>
-                              <br>
-                              <p class="hint-text all-caps font-montserrat small no-margin ">Today</p>
-                              <p class="all-caps font-montserrat  no-margin text-warning ">24</p>
-                              <br>
-                              <p class="hint-text all-caps font-montserrat small no-margin ">Week</p>
-                              <p class="all-caps font-montserrat  no-margin text-success ">56</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="bg-master-light p-l-20 p-r-20 p-t-10 p-b-10 pull-bottom full-width hidden-xs">
-                          <p class="no-margin">
-                            <a href="#"><i class="fa fa-arrow-circle-o-down text-success"></i></a>
-                            <span class="hint-text">Super secret options</span>
-                          </p>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-                <!-- END WIDGET -->
+
               </div>
               <div class="col-lg-4">
-                <!-- START WIDGET widget_realtimeWidget-->
-                <div class="widget-14 card no-border  no-margin widget-loader-circle">
-                  <div class="container-xs-height full-height">
-                    <div class="row-xs-height">
-                      <div class="col-xs-height">
-                        <div class="card-header ">
-                          <div class="card-title">Server load
-                          </div>
-                          <div class="card-controls">
-                            <ul>
-                              <li><a href="#" class="card-refresh text-black" data-toggle="refresh"><i
-										class="card-icon card-icon-refresh"></i></a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row-xs-height">
-                      <div class="col-xs-height">
-                        <div class="p-l-20 p-r-20">
-                          <p>Server: local</p>
-                          <div class="row">
-                            <div class="col-lg-3 col-md-12">
-                              <h4 class="bold no-margin">5.2GB</h4>
-                              <p class="small no-margin">Total usage</p>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                              <h5 class=" no-margin p-t-5">227.34KB</h5>
-                              <p class="small no-margin">Currently</p>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                              <h5 class=" no-margin p-t-5">117.65MB</h5>
-                              <p class="small no-margin">Average</p>
-                            </div>
-                            <div class="col-lg-3 visible-xlg">
-                              <div class="widget-14-chart-legend bg-transparent text-black no-padding pull-right"></div>
-                              <div class="clearfix"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row-xs-height">
-                      <div class="col-xs-height relative bg-master-lightest">
-                        <div class="widget-14-chart_y_axis"></div>
-                        <div class="widget-14-chart rickshaw-chart top-left top-right bottom-left bottom-right"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END WIDGET -->
+
               </div>
             </div>
             <div class="row">

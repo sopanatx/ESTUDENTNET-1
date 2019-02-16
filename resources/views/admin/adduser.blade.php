@@ -3,27 +3,36 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
-    <title>Pages - Admin Dashboard UI Kit - Form Layouts</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
-    <link rel="apple-touch-icon" href="pages/ico/60.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta content="" name="description" />
-    <meta content="" name="author" />
-    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
-    <link class="main-stylesheet" href="pages/css/themes/corporate.css" rel="stylesheet" type="text/css" />
+    <title>เพิ่มผู้ดูแลระบบ</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+      <link rel="apple-touch-icon" href="{{ asset('pages_admin/ico/60.png') }}">
+      <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('pages_admin/ico/76.png') }}">
+      <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('pages_admin/ico/120.png') }}">
+      <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('pages_admin/ico/152.png') }}">
+      <link rel="icon" type="image/x-icon" href="favicon.ico" />
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-touch-fullscreen" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="default">
+      <meta content="" name="description" />
+      <meta content="" name="author" />
+      <link href="{{ asset('assets_admin/plugins/pace/pace-theme-flash.css') }}" rel="stylesheet" type="text/css" />
+      <link href="{{ asset('assets_admin/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+      <link href="{{ asset('assets_admin/plugins/font-awesome/css/font-awesome.css') }}" rel="stylesheet" type="text/css" />
+      <link href="{{ asset('assets_admin/plugins/jqueradmin/formy-scrollbar/jquery.scrollbar.css') }}" rel="stylesheet" type="text/css" media="screen" />
+      <link href="{{ asset('assets_admin/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" media="screen" />
+      <link href="{{ asset('assets_admin/plugins/switchery/css/switchery.min.css') }}" rel="stylesheet" type="text/css" media="screen" />
+      <link href="{{ asset('assets_admin/plugins/nvd3/nv.d3.min.css') }}" rel="stylesheet" type="text/css" media="screen" />
+      <link href="{{ asset('assets_admin/plugins/mapplic/css/mapplic.css') }}" rel="stylesheet" type="text/css" />
+      <link href="{{ asset('assets_admin/plugins/rickshaw/rickshaw.min.css') }}" rel="stylesheet" type="text/css" />
+      <link href="{{ asset('pages_admin/css/pages-icons.css') }}" rel="stylesheet" type="text/css">
+      <link href="{{ asset('assets_admin/fonts/stylesheet.css') }}" rel="stylesheet" type="text/css" />
+
+      <link class="main-stylesheet" href="{{ asset('pages_admin/css/themes/corporate.css') }}" rel="stylesheet" type="text/css" />
+  <body class="fixed-header dashboard menu-pin menu-behind">
+  <style type="text/css">
+      html,body,a,h1,h2,h3,h4,h5,h6,div,span,li
+      {font-family:'rsuregular'}
+  </style>
   </head>
   <body class="fixed-header menu-pin menu-behind">
     <!-- BEGIN SIDEBPANEL-->
@@ -32,21 +41,21 @@
       <div class="sidebar-overlay-slide from-top" id="appMenu">
         <div class="row">
           <div class="col-xs-6 no-padding">
-            <a href="#" class="p-l-40"><img src="assets/img/demo/social_app.svg" alt="socail">
+            <a href="#" class="p-l-40"><img src="assets_admin/img/demo/social_app.svg" alt="socail">
             </a>
           </div>
           <div class="col-xs-6 no-padding">
-            <a href="#" class="p-l-10"><img src="assets/img/demo/email_app.svg" alt="socail">
+            <a href="#" class="p-l-10"><img src="assets_admin/img/demo/email_app.svg" alt="socail">
             </a>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-6 m-t-20 no-padding">
-            <a href="#" class="p-l-40"><img src="assets/img/demo/calendar_app.svg" alt="socail">
+            <a href="#" class="p-l-40"><img src="assets_admin/img/demo/calendar_app.svg" alt="socail">
             </a>
           </div>
           <div class="col-xs-6 m-t-20 no-padding">
-            <a href="#" class="p-l-10"><img src="assets/img/demo/add_more.svg" alt="socail">
+            <a href="#" class="p-l-10"><img src="assets_admin/img/demo/add_more.svg" alt="socail">
             </a>
           </div>
         </div>
@@ -54,7 +63,7 @@
       <!-- END SIDEBAR MENU TOP TRAY CONTENT-->
       <!-- BEGIN SIDEBAR MENU HEADER-->
       <div class="sidebar-header">
-        <img src="assets/img/logo_white.png" alt="logo" class="brand" data-src="assets/img/logo_white.png" data-src-retina="assets/img/logo_white_2x.png" width="78" height="22">
+        <img src="assets_admin/img/logo_white.png" alt="logo" class="brand" data-src="assets_admin/img/logo_white.png" data-src-retina="assets_admin/img/logo_white_2x.png" width="78" height="22">
         <div class="sidebar-header-controls">
           <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20 hidden-md-down" data-pages-toggle="#appMenu"><i class="fa fa-angle-down fs-16"></i>
           </button>
@@ -204,7 +213,7 @@
                 <span class="icon-thumbnail">fe</span>
               </li>
               <li class="">
-                <a href="form_layouts.html">Form Layouts</a>
+                <a href="adduser.blade.php">Form Layouts</a>
                 <span class="icon-thumbnail">fl</span>
               </li>
               <li class="">
@@ -544,13 +553,8 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group form-group-default input-group">
-                            <div class="form-input-group">
-                              <label>Pages username</label>
-                              <input type="text" class="form-control" name="username" placeholder="yourname.pages.com (this can be changed later)" required>
-                            </div>
-                            <div class="input-group-addon d-flex ">
-                              .pages.com
-                            </div>
+
+
                           </div>
                         </div>
                       </div>
@@ -587,19 +591,13 @@
                 <!-- START card -->
                 <div class="card card-transparent">
                   <div class="card-header ">
-                    <div class="card-title">Validation
+                    <div class="card-title">เพิ่มข้อมูลผู้ดูแลระบบ
                     </div>
                   </div>
                   <div class="card-block">
-                    <h3>Showcase and guide users with a <br>
-							better User Interface &amp; Experience.</h3>
-                    <p>Forms are one of the most important components
-                      <br> when it comes to a dashboard. Recognizing that fact, users are
-                      <br>able work in a maximum content width.</p>
-                    <br>
-                    <p class="small hint-text m-t-5">VIA senior product manager
-                      <br> for UI/UX at REVOX</p>
-                    <button class="btn btn-primary btn-cons">More</button>
+                    <h3>กรุณากรอกข้อมูลให้ถูกต้อง <br>
+
+
                   </div>
                 </div>
                 <!-- END card -->
@@ -616,6 +614,7 @@
                   <div class="card-header ">
                     <div class="card-title">Attached form layouts
                     </div>
+
                   </div>
                   <div class="card-block">
                     <h3>Attach your Forms to Organize
@@ -2039,29 +2038,41 @@
     </div>
     <!-- END OVERLAY -->
     <!-- BEGIN VENDOR JS -->
-    <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/tether/js/tether.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
-    <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/select2/js/select2.full.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
-    <script src="assets/plugins/switchery/js/switchery.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/pace/pace.min.js') }}" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/modernizr.custom.js') }}" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/tether/js/tether.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/jquery/jquery-easy.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/jquery-unveil/jquery.unveil.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/jquery-ios-list/jquery.ioslist.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/jquery-actual/jquery.actual.min.js') }}"></script>
+    <script src="{{ asset('assets_admin/plugins/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets_admin/plugins/select2/js/select2.full.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets_admin/plugins/classie/classie.js') }}"></script>
+    <script src="{{ asset('assets_admin/plugins/switchery/js/switchery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/nvd3/lib/d3.v3.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/nvd3/nv.d3.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/nvd3/src/utils.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/nvd3/src/tooltip.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/nvd3/src/interactiveLayer.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/nvd3/src/models/axis.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/nvd3/src/models/line.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/nvd3/src/models/lineWithFocusChart.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/mapplic/js/hammer.js') }}"></script>
+    <script src="{{ asset('assets_admin/plugins/mapplic/js/jquery.mousewheel.js') }}"></script>
+    <script src="{{ asset('assets_admin/plugins/mapplic/js/mapplic.js') }}"></script>
+    <script src="{{ asset('assets_admin/plugins/rickshaw/rickshaw.min.js') }}"></script>
+    <script src="{{ asset('assets_admin/plugins/jquery-sparkline/jquery.sparkline.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets_admin/plugins/skycons/skycons.js') }}" type="text/javascript"></script>
     <!-- END VENDOR JS -->
     <!-- BEGIN CORE TEMPLATE JS -->
-    <script src="pages/js/pages.min.js"></script>
+    <script src="{{ asset('pages_admin/js/pages.min.js') }}"></script>
     <!-- END CORE TEMPLATE JS -->
     <!-- BEGIN PAGE LEVEL JS -->
-    <script src="assets/js/form_layouts.js" type="text/javascript"></script>
-    <script src="assets/js/scripts.js" type="text/javascript"></script>
+    <script src="assets_admin/js/dashboard.js" type="text/javascript"></script>
+    <script src="assets_admin/js/scripts.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL JS -->
   </body>
 </html>

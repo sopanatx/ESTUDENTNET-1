@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class checkstd extends Model
 {
-    public $table = 'student';
+    protected $table = 'student';
     protected $primaryKey = 'std_id';
    
     public function checkhistory()

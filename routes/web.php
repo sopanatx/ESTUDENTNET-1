@@ -26,6 +26,7 @@ Route::get('/test', function () {
 });
 
 Route::get('/admin', 'adminController@index')->name('admin');
+Route::get('/admin/adduser','adminController@adduser')->name('adduser');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -38,8 +39,14 @@ Route::get('/home', 'HomeController@index')->name('home');
  //$chkshow = checkstd::find($std_id);
  //return view('result',compact('chkshow','current','date','yearth'));
 // });
-Route::get('result/','HomeController@search')->name('result1');
+Route::patch('result/{std_id}','Controller@resultData');
 Route::post('search/','HomeController@search')->name('result');
+Route::get('/data',function (){
+    return view::make('index');
+});
+Route::post('/result/{std_id}',function (){
+    $std_id = Input::get('std_id');
+});
 //Route:any('result/{std_id}',function (){
   // $std_id = Input::get('std_id');
 //    return view ('result/{std_id}','Controller@resultData')->name('result');
@@ -57,3 +64,7 @@ Route::get('/ac', function () {
   //->json(Checkhistory::findOrFail(28952)->get());
   echo thaidate('วันlที่ j F พ.ศ.Y เวลาH:i:s');
 });
+
+Route::get('search','searchController@index')->name('search');
+Route::get('autocomplete','searchController@autocomplete')->name('autocomplete');
+Route::get('result','Controller@resultNewData')->name('result');

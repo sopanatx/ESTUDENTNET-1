@@ -35,7 +35,7 @@ class HomeController extends Controller
     public function search(Request $request)
     {
         $stuid = $request->stu_id;
-        $chklogshow = Checkhistory::search('std_id',$stuid)->get();
+    //    $chklogshow = Checkhistory::search('std_id',$stuid)->get();
         $chkshow = checkstd::findOrFail($stuid);
 
         return view('result')->with(array('chklogshow'=>$chklogshow,'chkshow '=>$chkshow ));
@@ -45,4 +45,6 @@ class HomeController extends Controller
           //  return view('result')->withDetails($stu)->withQuery ( $std_id );
        // else return view ('result')->withMessage('No Details found. Try to search again !');
     }
+
+
 }

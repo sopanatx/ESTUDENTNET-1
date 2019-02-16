@@ -27,4 +27,8 @@ class adminController extends Controller
         $stdc = DB::table('student')->count();
         return view('admin/index',compact('users','stdc'));
     }
+    public function adduser()
+    {
+        return view('admin.adduser');
+    }
 }
