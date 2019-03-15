@@ -160,7 +160,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        Eyewitness\Eye\EyeServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         MasterRO\LaravelXSSFilter\XSSFilterServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
