@@ -238,7 +238,7 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 <br>
 <br>
 
-        <form method="get" action="{{ route('result') }}">
+        <form  method="get" action="{{ route('result') }}">
             @csrf
             <div class="form-group form-group-default">
                 <label>เลขประจำตัวนักเรียน</label>
@@ -248,8 +248,9 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
                 <p class="pull-left small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
                     โปรดตรวจสอบรหัสนักเรียนก่อนตรวจสอบผลหากไม่พบข้อมูล กรุณาติดต่อ งานทะเบียนวัดผล
                 </p>
+            {!! htmlFormSnippet() !!}
 
-             <!--   <button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">Submit</button> -->
+                <!--   <button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">Submit</button> -->
             </div>
 
             <div class="clearfix"></div>
