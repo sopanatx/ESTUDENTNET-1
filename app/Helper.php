@@ -12,3 +12,6 @@ function formatDateThai($strDate)
     $strMonthThai=$strMonthCut[$strMonth];
     return "$strDay $strMonthThai $strYear $strHour:$strMinute";
 }
+function customRequestCaptcha(){
+    return new \ReCaptcha\RequestMethod\Post();
+}

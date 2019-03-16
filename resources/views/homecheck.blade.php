@@ -3,9 +3,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 <title>ระบบตรวจสอบคะแนนพฤติกรรมนักเรียน</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <script src="../../../../cdn-cgi/apps/head/QJpHOqznaMvNOv9CGoAdo_yvYKU.js"></script><link rel="apple-touch-icon" href="pages/ico/60.png">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
 <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
 <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
@@ -236,21 +238,23 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 <br>
 <br>
 
-<form method="get" action="{{ route('result') }}">
-    {{ csrf_field() }}
-<div class="form-group form-group-default">
-<label>เลขประจำตัวนักเรียน</label>
-<input  name="std_id" id="std_id" class="form-control" type="number">
-</div>
-<div class="sm-p-t-10 clearfix">
-<p class="pull-left small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d"> 
-โปรดตรวจสอบรหัสนักเรียนก่อนตรวจสอบผลหากไม่พบข้อมูล กรุณาติดต่อ งานทะเบียนวัดผล
-</p>
-<button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">Submit</button>
-</div>
+        <form method="get" action="{{ route('result') }}">
+            @csrf
+            <div class="form-group form-group-default">
+                <label>เลขประจำตัวนักเรียน</label>
+                <input  name="std_id" id="std_id" class="form-control" type="number">
+            </div>
+            <div class="sm-p-t-10 clearfix">
+                <p class="pull-left small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
+                    โปรดตรวจสอบรหัสนักเรียนก่อนตรวจสอบผลหากไม่พบข้อมูล กรุณาติดต่อ งานทะเบียนวัดผล
+                </p>
 
-<div class="clearfix"></div>
-</form>
+             <!--   <button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">Submit</button> -->
+            </div>
+
+            <div class="clearfix"></div>
+        </form>
+
 
 </div>
 </div>

@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.28 on 2019-03-15 16:19:38.
+ * Generated for Laravel 5.7.28 on 2019-03-16 02:59:27.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -17248,6 +17248,17 @@ namespace Collective\Html {
                         /** @var \Collective\Html\FormBuilder $instance */
                         return $instance->componentCall($method, $parameters);
         }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function captcha($attributes = null)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->__invoke($attributes);
+        }
          
     }
 
@@ -17944,6 +17955,216 @@ namespace Rundiz\Thaidate {
  
 }
 
+namespace Buzz\LaravelGoogleCaptcha { 
+
+    /**
+     * 
+     *
+     */ 
+    class CaptchaFacade {
+        
+        /**
+         * Create captcha html element
+         *
+         * @param array $attributes
+         * @param array $options
+         * @return string 
+         * @static 
+         */ 
+        public static function display($attributes = array(), $options = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->display($attributes, $options);
+        }
+        
+        /**
+         * Create javascript api link with language
+         *
+         * @param array $options
+         * @return string 
+         * @static 
+         */ 
+        public static function getJsLink($options = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->getJsLink($options);
+        }
+        
+        /**
+         * Display multiple captcha on page
+         *
+         * @param array $options
+         * @return string 
+         * @static 
+         */ 
+        public static function displayMultiple($options = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->displayMultiple($options);
+        }
+        
+        /**
+         * 
+         *
+         * @param array $options
+         * @param array $attributes
+         * @return string 
+         * @internal param null $lang
+         * @static 
+         */ 
+        public static function displayJs($options = array(), $attributes = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->displayJs($options, $attributes);
+        }
+        
+        /**
+         * 
+         *
+         * @param boolean $multiple
+         * @static 
+         */ 
+        public static function multiple($multiple = true)
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->multiple($multiple);
+        }
+        
+        /**
+         * 
+         *
+         * @param array $options
+         * @static 
+         */ 
+        public static function setOptions($options = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->setOptions($options);
+        }
+        
+        /**
+         * Verify captcha
+         *
+         * @param string $response
+         * @param string $clientIp
+         * @return bool 
+         * @static 
+         */ 
+        public static function verify($response, $clientIp = null)
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->verify($response, $clientIp);
+        }
+         
+    }
+ 
+}
+
+namespace Anhskohbo\NoCaptcha\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class NoCaptcha {
+        
+        /**
+         * Create captcha html element
+         *
+         * @param array $attributes
+         * @param array $options
+         * @return string 
+         * @static 
+         */ 
+        public static function display($attributes = array(), $options = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->display($attributes, $options);
+        }
+        
+        /**
+         * Create javascript api link with language
+         *
+         * @param array $options
+         * @return string 
+         * @static 
+         */ 
+        public static function getJsLink($options = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->getJsLink($options);
+        }
+        
+        /**
+         * Display multiple captcha on page
+         *
+         * @param array $options
+         * @return string 
+         * @static 
+         */ 
+        public static function displayMultiple($options = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->displayMultiple($options);
+        }
+        
+        /**
+         * 
+         *
+         * @param array $options
+         * @param array $attributes
+         * @return string 
+         * @internal param null $lang
+         * @static 
+         */ 
+        public static function displayJs($options = array(), $attributes = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->displayJs($options, $attributes);
+        }
+        
+        /**
+         * 
+         *
+         * @param boolean $multiple
+         * @static 
+         */ 
+        public static function multiple($multiple = true)
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->multiple($multiple);
+        }
+        
+        /**
+         * 
+         *
+         * @param array $options
+         * @static 
+         */ 
+        public static function setOptions($options = array())
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->setOptions($options);
+        }
+        
+        /**
+         * Verify captcha
+         *
+         * @param string $response
+         * @param string $clientIp
+         * @return bool 
+         * @static 
+         */ 
+        public static function verify($response, $clientIp = null)
+        {
+                        /** @var \Buzz\LaravelGoogleCaptcha\Captcha $instance */
+                        return $instance->verify($response, $clientIp);
+        }
+         
+    }
+ 
+}
+
 namespace Barryvdh\Debugbar { 
 
     /**
@@ -18544,6 +18765,172 @@ namespace Barryvdh\Debugbar {
             //Method inherited from \DebugBar\DebugBar            
                         /** @var \Barryvdh\Debugbar\LaravelDebugbar $instance */
                         return $instance->offsetUnset($key);
+        }
+         
+    }
+ 
+}
+
+namespace Biscolab\ReCaptcha\Facades { 
+
+    /**
+     * Class ReCaptcha
+     *
+     * @package Biscolab\ReCaptcha\Facades
+     */ 
+    class ReCaptcha {
+        
+        /**
+         * Write ReCAPTCHA HTML tag in your FORM
+         * Insert before </form> tag
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function htmlFormSnippet()
+        {
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->htmlFormSnippet();
+        }
+        
+        /**
+         * 
+         *
+         * @param string $api_site_key
+         * @return \Biscolab\ReCaptcha\ReCaptchaBuilder 
+         * @static 
+         */ 
+        public static function setApiSiteKey($api_site_key)
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->setApiSiteKey($api_site_key);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $api_secret_key
+         * @return \Biscolab\ReCaptcha\ReCaptchaBuilder 
+         * @static 
+         */ 
+        public static function setApiSecretKey($api_secret_key)
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->setApiSecretKey($api_secret_key);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $version
+         * @return \Biscolab\ReCaptcha\ReCaptchaBuilder 
+         * @static 
+         */ 
+        public static function setVersion($version)
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->setVersion($version);
+        }
+        
+        /**
+         * 
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getVersion()
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->getVersion();
+        }
+        
+        /**
+         * 
+         *
+         * @param bool $skip_by_ip
+         * @return \Biscolab\ReCaptcha\ReCaptchaBuilder 
+         * @static 
+         */ 
+        public static function setSkipByIp($skip_by_ip)
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->setSkipByIp($skip_by_ip);
+        }
+        
+        /**
+         * 
+         *
+         * @return array|mixed 
+         * @static 
+         */ 
+        public static function getIpWhitelist()
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->getIpWhitelist();
+        }
+        
+        /**
+         * Checks whether the user IP address is among IPs "to be skipped"
+         *
+         * @return boolean 
+         * @static 
+         */ 
+        public static function skipByIp()
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->skipByIp();
+        }
+        
+        /**
+         * Write script HTML tag in you HTML code
+         * Insert before </head> tag
+         *
+         * @param string|null $formId
+         * @param array|null $configuration
+         * @return string 
+         * @throws Exception
+         * @static 
+         */ 
+        public static function htmlScriptTagJsApi($formId = '', $configuration = array())
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->htmlScriptTagJsApi($formId, $configuration);
+        }
+        
+        /**
+         * 
+         *
+         * @param array|null $configuration
+         * @return string 
+         * @static 
+         */ 
+        public static function htmlScriptTagJsApiV3($configuration = array())
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->htmlScriptTagJsApiV3($configuration);
+        }
+        
+        /**
+         * Call out to reCAPTCHA and process the response
+         *
+         * @param string $response
+         * @return boolean|array 
+         * @static 
+         */ 
+        public static function validate($response)
+        {
+            //Method inherited from \Biscolab\ReCaptcha\ReCaptchaBuilder            
+                        /** @var \Biscolab\ReCaptcha\ReCaptchaBuilderV2 $instance */
+                        return $instance->validate($response);
         }
          
     }
@@ -21172,7 +21559,13 @@ namespace  {
 
     class Thaidate extends \Rundiz\Thaidate\Thaidate {}
 
+    class Captcha extends \Buzz\LaravelGoogleCaptcha\CaptchaFacade {}
+
+    class NoCaptcha extends \Anhskohbo\NoCaptcha\Facades\NoCaptcha {}
+
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
+
+    class ReCaptcha extends \Biscolab\ReCaptcha\Facades\ReCaptcha {}
  
 }
 

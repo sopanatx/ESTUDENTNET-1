@@ -176,6 +176,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //RecaptchaService
+        Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
 
 
         // IDE
@@ -239,6 +241,7 @@ return [
         'Thaidate' => Rundiz\Thaidate\Thaidate::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'ReCaptcha' => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
     ],
 
 ];

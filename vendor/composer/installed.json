@@ -1,5 +1,130 @@
 [
     {
+        "name": "anam/captcha",
+        "version": "v1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/anam-hossain/captcha.git",
+            "reference": "0ea2ddd0546bf7a9f83245abe445559b1bd9911d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/anam-hossain/captcha/zipball/0ea2ddd0546bf7a9f83245abe445559b1bd9911d",
+            "reference": "0ea2ddd0546bf7a9f83245abe445559b1bd9911d",
+            "shasum": ""
+        },
+        "require": {
+            "google/recaptcha": "^1.1",
+            "php": ">=7.0.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "^1.0",
+            "orchestra/testbench": "^3.5",
+            "phpunit/phpunit": "^6.4"
+        },
+        "time": "2017-10-22T01:18:05+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Anam\\Captcha\\ServiceProvider\\CaptchaServiceProvider"
+                ],
+                "aliases": {
+                    "Captcha": "Anam\\Captcha\\Facade\\Captcha"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Anam\\Captcha\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Anam hossain",
+                "email": "enam33@gmail.com"
+            }
+        ],
+        "description": "reCAPTCHA and invisible reCAPTCHA for Laravel. reCAPTCHA protects your app against spam and bot.",
+        "homepage": "https://github.com/anam-hossain/captcha",
+        "keywords": [
+            "Invisible captcha",
+            "Invisible reCAPTCHA",
+            "Laravel Captcha",
+            "Laravel reCAPTCHA",
+            "captcha",
+            "reCAPTCHA V2",
+            "recaptcha"
+        ]
+    },
+    {
+        "name": "anhskohbo/no-captcha",
+        "version": "3.0.4",
+        "version_normalized": "3.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/anhskohbo/no-captcha.git",
+            "reference": "fd08c84bd0e05f4a048a9bba800ab64ada9fadfc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/anhskohbo/no-captcha/zipball/fd08c84bd0e05f4a048a9bba800ab64ada9fadfc",
+            "reference": "fd08c84bd0e05f4a048a9bba800ab64ada9fadfc",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.2",
+            "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*",
+            "php": ">=5.5.5"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.8"
+        },
+        "time": "2019-02-25T10:51:21+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider"
+                ],
+                "aliases": {
+                    "NoCaptcha": "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Anhskohbo\\NoCaptcha\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "anhskohbo",
+                "email": "anhskohbo@gmail.com"
+            }
+        ],
+        "description": "No CAPTCHA reCAPTCHA For Laravel.",
+        "keywords": [
+            "captcha",
+            "laravel",
+            "laravel4",
+            "laravel5",
+            "no-captcha",
+            "recaptcha"
+        ]
+    },
+    {
         "name": "barryvdh/laravel-debugbar",
         "version": "v3.2.3",
         "version_normalized": "3.2.3.0",
@@ -257,6 +382,122 @@
         "keywords": [
             "beyondcode",
             "laravel-dump-server"
+        ]
+    },
+    {
+        "name": "biscolab/laravel-recaptcha",
+        "version": "v3.4.2",
+        "version_normalized": "3.4.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/biscolab/laravel-recaptcha.git",
+            "reference": "cf6ab3680c55c7ef915c764f5953660df3fe7732"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/biscolab/laravel-recaptcha/zipball/cf6ab3680c55c7ef915c764f5953660df3fe7732",
+            "reference": "cf6ab3680c55c7ef915c764f5953660df3fe7732",
+            "shasum": ""
+        },
+        "require": {
+            "laravel/framework": "^5.5",
+            "php": "^7.1"
+        },
+        "require-dev": {
+            "orchestra/testbench": "~3.0",
+            "phpunit/phpunit": "6.*|7.*"
+        },
+        "time": "2019-02-27T21:00:28+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Biscolab\\ReCaptcha\\ReCaptchaServiceProvider"
+                ],
+                "aliases": {
+                    "ReCaptcha": "Biscolab\\ReCaptcha\\Facades\\ReCaptcha"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Biscolab\\ReCaptcha\\": "src/"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Roberto Belotti",
+                "email": "boby.belotti@gmail.com"
+            }
+        ],
+        "description": "Simple ReCaptcha package for Laravel 5"
+    },
+    {
+        "name": "buzz/laravel-google-captcha",
+        "version": "v2.1.10",
+        "version_normalized": "2.1.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/thinhbuzz/laravel-google-captcha.git",
+            "reference": "d6e8efdd11475cd590acf3041976f996e52fb5df"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/thinhbuzz/laravel-google-captcha/zipball/d6e8efdd11475cd590acf3041976f996e52fb5df",
+            "reference": "d6e8efdd11475cd590acf3041976f996e52fb5df",
+            "shasum": ""
+        },
+        "require": {
+            "google/recaptcha": "1.*",
+            "illuminate/support": "5.*",
+            "php": ">=5.4.0"
+        },
+        "time": "2018-04-18T15:56:14+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Buzz\\LaravelGoogleCaptcha\\CaptchaServiceProvider"
+                ],
+                "aliases": {
+                    "Captcha": "Buzz\\LaravelGoogleCaptcha\\CaptchaFacade"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Buzz\\LaravelGoogleCaptcha\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "ThinhBuzz",
+                "email": "mr.thinhbuzz@gmail.com",
+                "homepage": "https://www.facebook.com/thinh.buzz"
+            }
+        ],
+        "description": "Google captcha for laravel 5.*",
+        "homepage": "https://github.com/thinhbuzz/laravel-google-captcha",
+        "keywords": [
+            "captcha",
+            "google-captcha",
+            "laravel",
+            "laravel5",
+            "no-captcha",
+            "recaptcha"
         ]
     },
     {
@@ -1465,6 +1706,55 @@
             "data",
             "faker",
             "fixtures"
+        ]
+    },
+    {
+        "name": "google/recaptcha",
+        "version": "1.2.1",
+        "version_normalized": "1.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/google/recaptcha.git",
+            "reference": "e7add3be59211482ecdb942288f52da64a35f61a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/google/recaptcha/zipball/e7add3be59211482ecdb942288f52da64a35f61a",
+            "reference": "e7add3be59211482ecdb942288f52da64a35f61a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^2.2.20|^2.12",
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpunit": "^4.8.36|^5.7.27|^6.59|^7"
+        },
+        "time": "2018-08-05T09:31:53+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ReCaptcha\\": "src/ReCaptcha"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
+        "homepage": "https://www.google.com/recaptcha/",
+        "keywords": [
+            "Abuse",
+            "captcha",
+            "recaptcha",
+            "spam"
         ]
     },
     {

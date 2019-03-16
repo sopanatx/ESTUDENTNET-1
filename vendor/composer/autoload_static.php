@@ -33,6 +33,7 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
+        '5f2edeb18ca19ebd9ee6da72dc9f4292' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/helpers.php',
         '752af1c2bdb339e8474c3c31b22b7d54' => __DIR__ . '/..' . '/illuminate/html/helpers.php',
         'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         '8d737a76de7bfa8561ad4b6717b0eb86' => __DIR__ . '/..' . '/rundiz/thai-date/Rundiz/Thaidate/thaidate-functions.php',
@@ -93,6 +94,7 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         'R' => 
         array (
             'Rundiz\\Thaidate\\' => 16,
+            'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
@@ -184,6 +186,8 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         ),
         'B' => 
         array (
+            'Buzz\\LaravelGoogleCaptcha\\' => 26,
+            'Biscolab\\ReCaptcha\\' => 19,
             'BeyondCode\\DumpServer\\' => 22,
             'Barryvdh\\LaravelIdeHelper\\' => 26,
             'Barryvdh\\Debugbar\\' => 18,
@@ -191,6 +195,8 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         'A' => 
         array (
             'App\\' => 4,
+            'Anhskohbo\\NoCaptcha\\' => 20,
+            'Anam\\Captcha\\' => 13,
         ),
     );
 
@@ -312,6 +318,10 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         'Rundiz\\Thaidate\\' => 
         array (
             0 => __DIR__ . '/..' . '/rundiz/thai-date/Rundiz/Thaidate',
+        ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -510,6 +520,14 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         array (
             0 => __DIR__ . '/..' . '/laravelcollective/html/src',
         ),
+        'Buzz\\LaravelGoogleCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src',
+        ),
+        'Biscolab\\ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src',
+        ),
         'BeyondCode\\DumpServer\\' => 
         array (
             0 => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src',
@@ -525,6 +543,14 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'Anhskohbo\\NoCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/anhskohbo/no-captcha/src',
+        ),
+        'Anam\\Captcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/anam/captcha/src',
         ),
     );
 
@@ -568,6 +594,14 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
     );
 
     public static $classMap = array (
+        'Anam\\Captcha\\Captcha' => __DIR__ . '/..' . '/anam/captcha/src/Captcha.php',
+        'Anam\\Captcha\\Facade\\Captcha' => __DIR__ . '/..' . '/anam/captcha/src/Facade/Captcha.php',
+        'Anam\\Captcha\\SecretNotFoundException' => __DIR__ . '/..' . '/anam/captcha/src/SecretNotFoundException.php',
+        'Anam\\Captcha\\ServiceProvider\\CaptchaServiceProvider' => __DIR__ . '/..' . '/anam/captcha/src/ServiceProvider/CaptchaServiceProvider.php',
+        'Anam\\Captcha\\SiteKeyNotFoundException' => __DIR__ . '/..' . '/anam/captcha/src/SiteKeyNotFoundException.php',
+        'Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha' => __DIR__ . '/..' . '/anhskohbo/no-captcha/src/Facades/NoCaptcha.php',
+        'Anhskohbo\\NoCaptcha\\NoCaptcha' => __DIR__ . '/..' . '/anhskohbo/no-captcha/src/NoCaptcha.php',
+        'Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider' => __DIR__ . '/..' . '/anhskohbo/no-captcha/src/NoCaptchaServiceProvider.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -593,6 +627,7 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\Validators\\ReCaptcha' => __DIR__ . '/../..' . '/app/Validators/ReCaptcha.php',
         'App\\checkhistory' => __DIR__ . '/../..' . '/app/checkhistory.php',
         'App\\checkstd' => __DIR__ . '/../..' . '/app/checkstd.php',
         'App\\dataadmin' => __DIR__ . '/../..' . '/app/dataadmin.php',
@@ -671,6 +706,17 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         'BeyondCode\\DumpServer\\DumpServerServiceProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
         'BeyondCode\\DumpServer\\Dumper' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/Dumper.php',
         'BeyondCode\\DumpServer\\RequestContextProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/RequestContextProvider.php',
+        'Biscolab\\ReCaptcha\\Controllers\\ReCaptchaController' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/Controllers/ReCaptchaController.php',
+        'Biscolab\\ReCaptcha\\Facades\\ReCaptcha' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/Facades/ReCaptcha.php',
+        'Biscolab\\ReCaptcha\\ReCaptchaBuilder' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/ReCaptchaBuilder.php',
+        'Biscolab\\ReCaptcha\\ReCaptchaBuilderInvisible' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/ReCaptchaBuilderInvisible.php',
+        'Biscolab\\ReCaptcha\\ReCaptchaBuilderV2' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/ReCaptchaBuilderV2.php',
+        'Biscolab\\ReCaptcha\\ReCaptchaBuilderV3' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/ReCaptchaBuilderV3.php',
+        'Biscolab\\ReCaptcha\\ReCaptchaServiceProvider' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/ReCaptchaServiceProvider.php',
+        'Buzz\\LaravelGoogleCaptcha\\Captcha' => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src/Captcha.php',
+        'Buzz\\LaravelGoogleCaptcha\\CaptchaFacade' => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src/CaptchaFacade.php',
+        'Buzz\\LaravelGoogleCaptcha\\CaptchaServiceProvider' => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src/CaptchaServiceProvider.php',
+        'Buzz\\LaravelGoogleCaptcha\\Option' => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src/Option.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
@@ -4335,6 +4381,15 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
+        'ReCaptcha\\ReCaptcha' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/ReCaptcha.php',
+        'ReCaptcha\\RequestMethod' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod.php',
+        'ReCaptcha\\RequestMethod\\Curl' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Curl.php',
+        'ReCaptcha\\RequestMethod\\CurlPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/CurlPost.php',
+        'ReCaptcha\\RequestMethod\\Post' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Post.php',
+        'ReCaptcha\\RequestMethod\\Socket' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Socket.php',
+        'ReCaptcha\\RequestMethod\\SocketPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/SocketPost.php',
+        'ReCaptcha\\RequestParameters' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestParameters.php',
+        'ReCaptcha\\Response' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/Response.php',
         'Rundiz\\Thaidate\\Thaidate' => __DIR__ . '/..' . '/rundiz/thai-date/Rundiz/Thaidate/Thaidate.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
