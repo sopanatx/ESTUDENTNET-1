@@ -6,7 +6,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 <title>ระบบตรวจสอบคะแนนพฤติกรรมนักเรียน</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<script src="../../../../cdn-cgi/apps/head/QJpHOqznaMvNOv9CGoAdo_yvYKU.js"></script><link rel="apple-touch-icon" href="pages/ico/60.png">
+<script src="../../../../cdn-cgi/apps/head/QJpHOqznaMvNOv9CGoAdo_yvYKU.js">
+</script>
+    <link rel="apple-touch-icon" href="pages/ico/60.png">
     <script src='https://www.google.com/recaptcha/api.js'></script>
 <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
 <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
@@ -18,6 +20,7 @@
 <meta content="" name="description" />
 <meta content="" name="author" />
 
+
 <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
 <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
@@ -28,6 +31,8 @@
 
 <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
 <link class="main-stylesheet" href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
+
+
 
 </head>
 <body class="pace-dark">
@@ -238,32 +243,47 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
 <br>
 <br>
 
-        <form  method="get" action="{{ route('result') }}">
+        <form  id="checks" method="post" action="{{ route('result') }}">
             @csrf
             <div class="form-group form-group-default">
                 <label>เลขประจำตัวนักเรียน</label>
-                <input  name="std_id" id="std_id" class="form-control" type="number">
+                <input  name="std_id" id="std_id" class="form-control" type="number" required>
             </div>
             <div class="sm-p-t-10 clearfix">
                 <p class="pull-left small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
-                    โปรดตรวจสอบรหัสนักเรียนก่อนตรวจสอบผลหากไม่พบข้อมูล กรุณาติดต่อ งานทะเบียนวัดผล
+                    ให้กดยืนยันว่า i'm not a robot ด้านล่างก่อน จึงจะสามารถกดค้นหาได้ครับ
                 </p>
-            {!! htmlFormSnippet() !!}
-
-                <!--   <button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">Submit</button> -->
-            </div>
+                <p class="pull-left small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
+                   หากค้นหาไม่พบข้อมูล กรุณาติดต่อ XXXXXXXX
+                <script>
+                    function makeaction(){
+                        document.getElementById('btn_submit').disabled = false;
+                    }
+                </script>
+                <div class="g-recaptcha" data-callback="makeaction" data-sitekey="6LdrAZgUAAAAALEjhuaoPBtTc6RfXzLr5pbZ0B82"></div>
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button type="submit" id="btn_submit" name="btn_submit" class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left"  disabled>ตรวจสอบข้อมูล</button>
+                </div>
 
             <div class="clearfix"></div>
         </form>
 
-
 </div>
+
+
 </div>
 </div>
 <div class="col-md-6">
 <div class="visible-xs visible-sm b-b b-grey-light m-t-35 m-b-30"></div>
 <div class="p-l-40 sm-p-l-0 sm-p-t-10">
 <h3 class="checktext" style="color:#ffc300">
+    <br>
+    <br>
+
 วิธีการยื่นขอปรับคะแนน<br>
 พฤติกรรมนักเรียน
 </h3>

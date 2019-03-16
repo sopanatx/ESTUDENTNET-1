@@ -69,4 +69,7 @@ Route::get('/ac', function () {
 
 Route::get('search','searchController@index')->name('search');
 Route::get('autocomplete','searchController@autocomplete')->name('autocomplete');
-Route::get('result','Controller@resultNewData')->name('result');
+Route::post('result','Controller@resultNewData')->name('result');
+route::get('/nindex',function (){
+   return view('nindex');
+});

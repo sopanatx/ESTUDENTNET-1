@@ -45,11 +45,10 @@ return view('homecheck',compact('std_id'));
         $std_search = $request->input('std_id');
         $chklogshow = Checkhistory::where('std_id',$std_search)->get();
         $chkshow = checkstd::findOrFail($std_search);
-        $validate = Validator::make(Input::all(), [
-            'g-recaptcha-response' => 'required|captcha'
-        ]);
-      return view('result',compact('chkshow'))->with(array('chklogshow'=>$chklogshow));
+
+        return view('result',compact('chkshow'))->with(array('chklogshow'=>$chklogshow));
        // return csrf_token();
+
     }
     public function student_history()
     {
