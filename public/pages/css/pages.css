@@ -44,6 +44,7 @@ body.mobile {
   position: relative;
   font-weight: bold;
   font-size:20px;
+    font-family: rsuregular;
 }
 .checkform {
   width: 700px;
@@ -2117,6 +2118,7 @@ hr.dotted {
 }
 .text-white {
   color: #fff !important;
+    font-family: rsuregular;
 }
 .text-complete {
   color: #48b0f7 !important;
@@ -4554,7 +4556,7 @@ textarea {
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin-top: 1px 0 0;
+  margin-top: 1px;
   line-height: normal;
   cursor: pointer;
   -webkit-box-sizing: border-box;

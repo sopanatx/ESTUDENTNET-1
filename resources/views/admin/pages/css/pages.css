@@ -3142,6 +3142,7 @@ hr.dotted {
 }
 .text-complete {
   color: #48b0f7 !important;
+    font-family: rsuregular;
 }
 .text-success {
   color: #10cfbd !important;

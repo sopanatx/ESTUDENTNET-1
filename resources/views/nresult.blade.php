@@ -38,31 +38,40 @@
     </div>
     <form  id="checks" method="post" action="{{ route('result') }}">
         @csrf
-        <div class="form-group form-group-default center-margin center-block center-scale">
-            <label class="text-center">เลขประจำตัวนักเรียน</label>
-            <input  name="std_id" id="std_id" class="form-control" type="number" required>
+        <p class="text-center text-black"> ผลการค้นหา </p>
+     <div>
+
+     </div>
+        <div class="jumbotron">
+
+            <fieldset>
+                <legend>ข้อมูลของบุคคลที่ค้นหา</legend>
+                <br>
+                <div class="form-group">
+                    <label for="nid" class="col-lg-2 control-label">เลขประจำตัวนักเรียน</label>
+                </div>
+<br>
+                <div class="form-group">
+                    <label for="name" class="col-lg-2 control-label">ชื่อ : นายทดสอบ ทดสอบ</label>
+                </div>
+
+            </fieldset>
+
         </div>
-        <div class="sm-p-t-10 clearfix text-center">
-            <p class="small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
-                ให้กดยืนยันว่า i'm not a robot ด้านล่างก่อน จึงจะสามารถกดค้นหาได้ครับ
-            </p>
-            <p class="small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
-                หากค้นหาไม่พบข้อมูล กรุณาติดต่อ XXXXXXXX
-<center>
-        <div class="g-recaptcha"   data-callback="makeaction" data-sitekey="6LdrAZgUAAAAALEjhuaoPBtTc6RfXzLr5pbZ0B82" required></div>
-
-            <div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <button type="submit" id="btn_submit" name="btn_submit" class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left"  disabled>ตรวจสอบข้อมูล</button>
-
-            </div>
-
-
-            <div class="clearfix"></div>
+        <br>
+        <table class="table table-bordered">
+            <thead class="table-responsive-block mapplic-minimap-background text-center" bgcolor="#E5EFF3">
+            <tr>
+                <th class="text-center" scope="col">วันที่</th>
+                <th class="text-center" scope="col">รายละเอียด</th>
+                <th class="text-center" scope="col">สถานที่</th>
+                <th class="text-center" scope="col">คะแนนที่โดนหัก</th>
+                <th class="text-center" scope="col">ผู้บันทึกข้อมูล</th>
+            </tr>
+            </thead>
+        </table>
     </form>
+
 </section>
 <section class="text-center">
     <div class="text-center text-info">
