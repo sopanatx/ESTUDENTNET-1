@@ -30,7 +30,6 @@ class Controller extends BaseController
         ]);
         $current = Carbon::now();
         $checkstd = checkstd::all();
-
         foreach ($checkstd as $chkshow)
 {
      $chkshow->std_name;
@@ -41,11 +40,6 @@ return view('nindex',compact('std_id'));
 
     public function resultData($std_id)
     {
-        NoCaptcha::shouldReceive('verifyResponse')
-            ->once()
-            ->andReturn(true);
-    //    $chkshow = checkhistory::all();
-      //  $chklogshow = Checkhistory::find($std_id);
        $chklogshow = Checkhistory::where('std_id',$std_id)->get();
        $chkshow = checkstd::findOrFail($std_id);
         return view('/result',compact('chkshow'))->with(array('chklogshow'=>$chklogshow));
