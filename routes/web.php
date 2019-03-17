@@ -76,13 +76,18 @@ route::get('/nindex',function (){
 
 //$err_getmethod = "API Error : Invalid Request Method!";
 route::get('/result', function(){
+
+
     $ss =  app('Illuminate\Http\Response')->status();
    if ($ss == 200) {
-       return ("API Error : Your Session Has been Expired! or Invalid Method <br> Status code : 200 OK!");
+       return ("API Error : Your Session Has been Expired! or Invalid Method <br> Status code : 200");
 
    }
    elseif ($ss == 403){
        return "403 Forbiden!";
+   }
+   elseif ($ss = 400){
+       return "Server has been Blocked Your Request <br> Status Code : 400 Bad Request";
    }
    //return $ss;
     //return ("API Error : Your Session Has been Expired! or Invalid Method");
