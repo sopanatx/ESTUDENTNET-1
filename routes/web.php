@@ -64,7 +64,7 @@ Route::get('/ac', function () {
    // echo Checkhistory::find(28952)->get();
 //return response()
   //->json(Checkhistory::findOrFail(28952)->get());
-  echo thaidate('วันlที่ j F พ.ศ.Y เวลาH:i:s');
+  echo thaidate('วันlที่ j F พ.ศ.Y เวลา H:i:s');
 });
 
 Route::get('search','searchController@index')->name('search');
@@ -76,5 +76,14 @@ route::get('/nindex',function (){
 
 //$err_getmethod = "API Error : Invalid Request Method!";
 route::get('/result', function(){
-    return "API Error : Your Session Has been Expired! or Invalid Method";
-});
+    $ss =  app('Illuminate\Http\Response')->status();
+   if ($ss == 200) {
+       return ("API Error : Your Session Has been Expired! or Invalid Method <br> Status code : 200 OK!");
+
+   }
+   elseif ($ss == 403){
+       return "403 Forbiden!";
+   }
+   //return $ss;
+    //return ("API Error : Your Session Has been Expired! or Invalid Method");
+})->name("Error!");
