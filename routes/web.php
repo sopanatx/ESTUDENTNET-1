@@ -84,7 +84,7 @@ route::get('/result', function(){
 
    }
    elseif ($ss == 403){
-       return "403 Forbiden!";
+       return response()->json(['error_code' => 'SESSION403-1', 'message' => 'Forbidden Access']);
    }
    elseif ($ss = 400){
        return "Server has been Blocked Your Request <br> Status Code : 400 Bad Request";
@@ -92,3 +92,9 @@ route::get('/result', function(){
    //return $ss;
     //return ("API Error : Your Session Has been Expired! or Invalid Method");
 })->name("Error!");
+
+route::get('/nresult',function (){
+   return view('nresult');
+
+});
+

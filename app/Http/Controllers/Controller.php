@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use http\Env\Response;
+use http\Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -22,18 +25,25 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public function index()
     {
+        $validate = Validator::make(Input::all(), [
+            'g-recaptcha-response' => 'required|captcha'
+        ]);
         $current = Carbon::now();
         $checkstd = checkstd::all();
+
         foreach ($checkstd as $chkshow)
 {
      $chkshow->std_name;
 }
-return view('homecheck',compact('std_id'));
+return view('nindex',compact('std_id'));
         
     }
 
     public function resultData($std_id)
     {
+        NoCaptcha::shouldReceive('verifyResponse')
+            ->once()
+            ->andReturn(true);
     //    $chkshow = checkhistory::all();
       //  $chklogshow = Checkhistory::find($std_id);
        $chklogshow = Checkhistory::where('std_id',$std_id)->get();
@@ -42,15 +52,30 @@ return view('homecheck',compact('std_id'));
         
     }
 
+
     public function resultNewData(Request $request){
         $std_search = $request->input('std_id');
+        $gretoken = $request->input('g-recaptcha-response');
         $chklogshow = Checkhistory::where('std_id',$std_search)->get();
-        $chkshow = checkstd::findOrFail($std_search);
-        $validate = Validator::make(Input::all(), [
-            'g-recaptcha-response' => 'required|captcha'
-        ]);
-        return view('result',compact('chkshow','validate'))->with(array('chklogshow'=>$chklogshow));
-       // return csrf_token();
+        $getnetworkip = $request->ip();
+        $csrftokenvalidate = $request->input('_token');
+
+       try{
+           $chkshow = checkstd::findOrFail($std_search);
+       } catch (ModelNotFoundException $exception) {
+           return response()->json(['error_code' => '0015', 'message' => ' Your Request Data Not Found in our Database! ', 'reCaptcha_token' => $gretoken , 'IP' => $getnetworkip , 'Session' => $csrftokenvalidate]);
+       }
+       // check reCaptcha Token
+        $secretKey = "6LdrAZgUAAAAAD00_okGiasF19t5deuBBDeTdkXl";
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($gretoken);
+        $response = file_get_contents($url);
+        $responseKeys = json_decode($response,true);
+        if($responseKeys["success"]) {
+            return view('result',compact('chkshow','validate'))->with(array('chklogshow'=>$chklogshow));
+        } else {
+            //return response()->json(['error_code' => '0013', 'message' => 'reCaptcha token Validate Error or Session Expired' , 'suggest_message' => "Please go to homepage and don't forgot to Check the reCaptcha"]);
+            return redirect('/');
+        }
 
     }
     public function student_history()
