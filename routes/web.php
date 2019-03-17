@@ -73,3 +73,8 @@ Route::post('result','Controller@resultNewData')->name('result');
 route::get('/nindex',function (){
    return view('nindex');
 });
+
+//$err_getmethod = "API Error : Invalid Request Method!";
+route::get('/result', function(){
+    return "API Error : Your Session Has been Expired! or Invalid Method";
+});

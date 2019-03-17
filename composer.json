@@ -10,7 +10,6 @@
         "anhskohbo/no-captcha": "^3.0",
         "barryvdh/laravel-ide-helper": "^2.5",
         "biscolab/laravel-recaptcha": "^3.0",
-        "buzz/laravel-google-captcha": "^2.1",
         "doctrine/dbal": "^2.9",
         "eyewitness/eye": "dev-beta",
         "fideloper/proxy": "^4.0",

@@ -32,7 +32,11 @@
 <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
 <link class="main-stylesheet" href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
 
-
+    <script>
+        function makeaction(){
+            document.getElementById('btn_submit').disabled = false;
+        }
+    </script>
 
 </head>
 <body class="pace-dark">
@@ -255,11 +259,7 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
                 </p>
                 <p class="pull-left small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
                    หากค้นหาไม่พบข้อมูล กรุณาติดต่อ XXXXXXXX
-                <script>
-                    function makeaction(){
-                        document.getElementById('btn_submit').disabled = false;
-                    }
-                </script>
+
                 <div class="g-recaptcha" data-callback="makeaction" data-sitekey="6LdrAZgUAAAAALEjhuaoPBtTc6RfXzLr5pbZ0B82"></div>
                 <div>
                     <br>
@@ -268,6 +268,7 @@ Crafted with <span class="font-montserrat text-uppercase">Perfection</span> & de
                     <br>
                     <button type="submit" id="btn_submit" name="btn_submit" class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left"  disabled>ตรวจสอบข้อมูล</button>
                 </div>
+
 
             <div class="clearfix"></div>
         </form>

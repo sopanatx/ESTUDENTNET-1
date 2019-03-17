@@ -186,7 +186,6 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         ),
         'B' => 
         array (
-            'Buzz\\LaravelGoogleCaptcha\\' => 26,
             'Biscolab\\ReCaptcha\\' => 19,
             'BeyondCode\\DumpServer\\' => 22,
             'Barryvdh\\LaravelIdeHelper\\' => 26,
@@ -520,10 +519,6 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         array (
             0 => __DIR__ . '/..' . '/laravelcollective/html/src',
         ),
-        'Buzz\\LaravelGoogleCaptcha\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src',
-        ),
         'Biscolab\\ReCaptcha\\' => 
         array (
             0 => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src',
@@ -713,10 +708,6 @@ class ComposerStaticInit254b7ac303fd8406fd7b943b3290cc8b
         'Biscolab\\ReCaptcha\\ReCaptchaBuilderV2' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/ReCaptchaBuilderV2.php',
         'Biscolab\\ReCaptcha\\ReCaptchaBuilderV3' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/ReCaptchaBuilderV3.php',
         'Biscolab\\ReCaptcha\\ReCaptchaServiceProvider' => __DIR__ . '/..' . '/biscolab/laravel-recaptcha/src/ReCaptchaServiceProvider.php',
-        'Buzz\\LaravelGoogleCaptcha\\Captcha' => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src/Captcha.php',
-        'Buzz\\LaravelGoogleCaptcha\\CaptchaFacade' => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src/CaptchaFacade.php',
-        'Buzz\\LaravelGoogleCaptcha\\CaptchaServiceProvider' => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src/CaptchaServiceProvider.php',
-        'Buzz\\LaravelGoogleCaptcha\\Option' => __DIR__ . '/..' . '/buzz/laravel-google-captcha/src/Option.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',

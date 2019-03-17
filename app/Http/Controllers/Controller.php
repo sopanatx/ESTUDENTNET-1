@@ -16,6 +16,7 @@ use Rundiz\Thaidate\Thaidate;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\Input;
+use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -45,8 +46,10 @@ return view('homecheck',compact('std_id'));
         $std_search = $request->input('std_id');
         $chklogshow = Checkhistory::where('std_id',$std_search)->get();
         $chkshow = checkstd::findOrFail($std_search);
-
-        return view('result',compact('chkshow'))->with(array('chklogshow'=>$chklogshow));
+        $validate = Validator::make(Input::all(), [
+            'g-recaptcha-response' => 'required|captcha'
+        ]);
+        return view('result',compact('chkshow','validate'))->with(array('chklogshow'=>$chklogshow));
        // return csrf_token();
 
     }
