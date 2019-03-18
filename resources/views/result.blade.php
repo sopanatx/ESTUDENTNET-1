@@ -50,7 +50,10 @@
                 <h3 class="text-black text-center bold"> ชั้น มัธยมศึกษาปีที่ {{$chkshow->class}}/{{$chkshow->room}} </h3>
             <h3 class="text-date text-center bold"> คะแนน ความประพฤติปัจจุบัน​ : {{$chkshow->point}}</h3>
             <h3 class="text-black text-center bold"> ข้อมูลปรับปรุงล่าสุดวันที่ {{formatDateThai($chkshow->updated_at)}}  </h3>
-            <br>
+         <center>
+          <button class="btn btn-primary font-montserrat all-caps text-center center">กลับไปค้นหาข้อมูลอีกครั้ง</button>
+         </center>
+             <br>
         </div>
 
         <br>
@@ -67,11 +70,11 @@
             <tbody>
             @foreach ($chklogshow as $data)
                 <tr>
-                    <td>{{ formatDateThai($data->created_at)}}</td>
-                    <td>{{$data->detail  ?? "No record"}}</td>
-                    <td>{{$data->location  ?? "No record"}}</td>
-                    <td>{{$data->point_fund  ?? "No record"}}</td>
-                    <td>{{$data->save_man  ?? "No record"}}</td>
+                    <td class="text-black bold text-center" bgcolor="#E5EFF3">{{ formatDateThai($data->created_at)}}</td>
+                    <td class="text-black bold text-center" bgcolor="#E5EFF3">{{$data->detail  ?? "No record"}}</td>
+                    <td class="text-black bold text-center" bgcolor="#E5EFF3">{{$data->location  ?? "No record"}}</td>
+                    <td class="text-black bold text-center" bgcolor="#E5EFF3">{{$data->point_fund  ?? "No record"}}</td>
+                    <td class="text-black bold text-center" bgcolor="#E5EFF3">{{$data->save_man  ?? "No record"}}</td>
                 </tr>
             @endforeach
             </tbody>
