@@ -70,6 +70,8 @@ return view('nindex',compact('std_id'));
         } else {
             //return response()->json(['error_code' => '0013', 'message' => 'reCaptcha token Validate Error or Session Expired' , 'suggest_message' => "Please go to homepage and don't forgot to Check the reCaptcha"]);
             return redirect('/');
+          //  return alert()->message('Message', 'Optional Title');
+
         }
 
     }
