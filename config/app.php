@@ -183,6 +183,8 @@ return [
         // IDE
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
+        // CSRF
+        GeneaLabs\LaravelCaffeine\Providers\Service::class,
     ],
 
     /*
