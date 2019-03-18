@@ -52,13 +52,14 @@ return view('nindex',compact('std_id'));
         $gretoken = $request->input('g-recaptcha-response');
         $chklogshow = Checkhistory::where('std_id',$std_search)->get();
         $getnetworkip = $request->ip();
-        $csrftokenvalidate = $request->input('_token');
 
        try{
            $chkshow = checkstd::findOrFail($std_search);
        } catch (ModelNotFoundException $exception) {
-           return response()->json(['error_code' => '0015', 'message' => ' Your Request Data Not Found in our Database! ', 'reCaptcha_token' => $gretoken , 'IP' => $getnetworkip , 'Session' => $csrftokenvalidate]);
+           return response()->json(['error_code' => '0015', 'message' => ' Your Request Data Not Found in our Database! ', 'IP' => $getnetworkip]);
        }
+
+
        // check reCaptcha Token
         $secretKey = "6LdrAZgUAAAAAD00_okGiasF19t5deuBBDeTdkXl";
         $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($gretoken);

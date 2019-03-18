@@ -5,7 +5,6 @@ use Carbon\Carbon;
 use Jenssegers\Date\Date;
 use Rundiz\Thaidate\Thaidate;
 use Illuminate\Support\Facades\Input;
-
 Date::setLocale('th');
 
 /*
