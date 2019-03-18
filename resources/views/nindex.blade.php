@@ -40,10 +40,10 @@
         @csrf
         <div class="form-group form-group-default center-margin center-block center-scale">
             <label class="text-center">เลขประจำตัวนักเรียน</label>
-            <input  name="std_id" id="std_id" class="form-control" type="number" required>
+            <input  name="std_id" id="std_id" class="form-control text-center" type="number" style="font-size: 30px;" required>
         </div>
         <div class="sm-p-t-10 clearfix text-center">
-            <p class="small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
+            <p class="small hint-text m-t-5 font-arial text-center" style="color:#f0f5f8">
                 ให้กดยืนยันว่า i'm not a robot ด้านล่างก่อน จึงจะสามารถกดค้นหาได้ครับ
             </p>
             <p class="small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
@@ -68,8 +68,8 @@
     <div class="text-center text-info">
         <div id="infodev" class="text-white">
             <br>
-            <h5 class="checktext"> Server : Singapore :  SGP-XNI04 </h5>
-            <h4 class="checktext"> Powered By NEXT!TECH TEAM | Copyright 2016 - 2019. All Right Reserved. </h4>
+            <h5 class="checktext" style="color:#ffffff"> Server : Singapore :  SGP-XNI04 </h5>
+            <h4 class="checktext" style="color:#ffffff"> Powered By NEXT!TECH TEAM | Copyright 2016 - 2019. All Right Reserved. </h4>
         </div>
     </div>
 </section>

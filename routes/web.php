@@ -97,3 +97,6 @@ route::get('/nresult',function (){
 
 });
 
+Route::get('rehome',function(){
+   return redirect('/');
+});
