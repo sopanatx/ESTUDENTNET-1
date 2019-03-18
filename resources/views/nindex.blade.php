@@ -22,6 +22,7 @@
         document.getElementById('btn_submit').disabled = false;
     }
 </script>
+
 <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
 <link class="main-stylesheet" href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
 <body>
@@ -36,33 +37,44 @@
             ส่วนตรวจสอบคะแนนพฤติกรรม
         </h2>
     </div>
-    <form  id="checks" method="post" action="{{ route('result') }}">
-        @csrf
-        <div class="form-group form-group-default center-margin center-block center-scale">
-            <label class="text-center">เลขประจำตัวนักเรียน</label>
-            <input  name="std_id" id="std_id" class="form-control text-center" type="number" style="font-size: 30px;" required>
-        </div>
-        <div class="sm-p-t-10 clearfix text-center">
-            <p class="small hint-text m-t-5 font-arial text-center" style="color:#f0f5f8">
-                ให้กดยืนยันว่า i'm not a robot ด้านล่างก่อน จึงจะสามารถกดค้นหาได้ครับ
-            </p>
-            <p class="small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
-                หากค้นหาไม่พบข้อมูล กรุณาติดต่อ XXXXXXXX
-<center>
-        <div class="g-recaptcha"   data-callback="makeaction" data-sitekey="6LdrAZgUAAAAALEjhuaoPBtTc6RfXzLr5pbZ0B82" required></div>
 
-            <div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <button type="submit" id="btn_submit" name="btn_submit" class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left"  disabled>ตรวจสอบข้อมูล</button>
+                <div class="jumbotron transparent">
+                    <h1 class="display-4 text-black text-center">โปรดกรอกเลขประจำตัวนักเรียน เพื่อทำการตรวจสอบ</h1>
+                    <h6 class="lead text-date text-center">    หากพบว่าข้อมูลดังกล่าวมีข้อผิดพลาด หรือไม่ถูกต้อง ให้ทำการติดต่อ...</h6>
+                    <hr class="my-4">
 
-            </div>
+                    <h5 class="small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
+                        หากค้นหาไม่พบข้อมูล กรุณาติดต่อ XXXXXXXX
+                    </h5>
+                    <h6 class="small hint-text m-t-5 font-arial text-center" style="color:#ff4d4d">
+                        ให้กดยืนยันว่า i'm not a robot ด้านล่างก่อน จึงจะสามารถกดค้นหาได้ครับ
+                    </h6>
+                    <center>
+                        <form  id="checks" method="post" action="{{ route('result') }}">
+                            @csrf
+                            <div class="form-group form-group-default center-margin center-block center-scale">
+                                <label class="text-center">เลขประจำตัวนักเรียน</label>
+                                <input  name="std_id" id="std_id" class="form-control text-center" type="number" style="font-size: 30px;" required>
+                            </div>
+                            <div class="g-recaptcha"   data-callback="makeaction" data-sitekey="6LdrAZgUAAAAALEjhuaoPBtTc6RfXzLr5pbZ0B82" required></div>
+
+                            <div>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                                <button type="submit" id="btn_submit" name="btn_submit" class="btn btn-primary font-montserrat all-caps fs-12 text-center text-white"  disabled>ตรวจสอบข้อมูล</button>
+
+                                <br>
+                            </div>
+                        </form>
 
 
-            <div class="clearfix"></div>
-    </form>
+
+                        <br>
+                        <div class="clearfix"></div>
+
 </section>
 <section class="text-center">
     <div class="text-center text-info">

@@ -22,6 +22,17 @@
         document.getElementById('btn_submit').disabled = false;
     }
 </script>
+<style type="text/css">
+    body {
+        padding-top: 5rem;            /* Provide Space from Top */
+        background: #942626;          /* Set background color for body to justify transparency of Jumbotron */
+    }
+
+    .jumbotron {
+        background: none;             /* Transparent background */
+    }
+
+</style>
 <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
 <link class="main-stylesheet" href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
 <body>
@@ -39,10 +50,10 @@
     <form  id="checks" method="post" action="{{ route('result') }}">
         @csrf
         <p class="text-center text-black"> ผลการค้นหา </p>
-        <div class="jumbotron cover-img-container">
+        <div class="jumbotron transparent">
             <h1 class="display-4 text-black">ข้อมูลผู้ที่ค้นหา</h1>
             <h5 class="lead text-black">ข้อมูลดังกล่าวเป็นข้อมูลเบื้องต้น โดยรายละเอียดของท่านถูกปรับปรุงล่าสุดวันที่ </h5>
- <h6 class="lead text-date"> {{formatDateThai($chkshow->updated_at)}}   หากพบว่าข้อมูลดังกล่าวมีข้อผิดพลาด หรือไม่ถูกต้อง ให้ทำการติดต่อ...</h6>
+            <h6 class="lead text-date"> {{formatDateThai($chkshow->updated_at)}}   หากพบว่าข้อมูลดังกล่าวมีข้อผิดพลาด หรือไม่ถูกต้อง ให้ทำการติดต่อ...</h6>
              <hr class="my-4">
 
                 <h3 class="text-black text-center bold"> เลขประจำตัวนักเรียน : {{$chkshow->std_id}} </h3>
@@ -51,7 +62,7 @@
             <h3 class="text-date text-center bold"> คะแนน ความประพฤติปัจจุบัน​ : {{$chkshow->point}}</h3>
             <h3 class="text-black text-center bold"> ข้อมูลปรับปรุงล่าสุดวันที่ {{formatDateThai($chkshow->updated_at)}}  </h3>
          <center>
-          <button class="btn btn-primary font-montserrat all-caps text-center center">กลับไปค้นหาข้อมูลอีกครั้ง</button>
+          <button class="btn btn-primary font-montserrat all-caps text-center center ">กลับไปค้นหาข้อมูลอีกครั้ง</button>
          </center>
              <br>
         </div>
